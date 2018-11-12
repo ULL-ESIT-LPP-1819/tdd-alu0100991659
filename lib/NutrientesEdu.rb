@@ -1,6 +1,10 @@
 require "NutrientesEdu/version"
 
-module NutrientesEdu
-  class Error < StandardError; end
-  # Your code goes here...
-end
+  class Alimento
+    
+    attr_reader :nombre
+    
+    def initialize(nombre)
+      @nombre = nombre
+    end
+  end
