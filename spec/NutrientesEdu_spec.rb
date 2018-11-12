@@ -4,7 +4,7 @@ RSpec.describe NutrientesEdu do
   end
   
   before :all do
-    @pistacho = Alimento.new("pistacho", 20, 5, 30, 3, 60)
+    @pistacho = Alimento.new("pistacho", 20, 5, 30, 3, 60, 1)
   end
   
   it "does something useful" do
@@ -29,6 +29,9 @@ RSpec.describe NutrientesEdu do
     end
     it "Tiene cantidad de proteinas" do
       expect(@pistacho).to have_attributes(:protein => 60)
+    end
+    it "Tiene cantidad de sal" do
+      expect(@pistacho).to have_attributes(:sal => 1)
     end
   
 end
