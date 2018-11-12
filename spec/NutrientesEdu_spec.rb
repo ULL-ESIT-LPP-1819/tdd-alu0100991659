@@ -45,5 +45,8 @@ RSpec.describe NutrientesEdu do
     it "Tiene metodo para obtener cantidad de carbohidratos" do
       expect(@pistacho.carbs).to eq(30)
     end
+    it "Tiene metodo para obtener cantidad de azucares" do
+      expect(@pistacho.azucar).to eq(3)
+    end
 end
 end
