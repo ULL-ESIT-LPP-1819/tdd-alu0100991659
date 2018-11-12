@@ -39,6 +39,8 @@ RSpec.describe NutrientesEdu do
     it "Tiene metodo para obtener cantidad de grasas" do
       expect(@pistacho.grasas).to eq(20)
     end
-  
+    it "Tiene metodo para obtener cantidad de grasas saturadas" do
+      expect(@pistacho.grsat).to eq(5)
+    end
 end
 end
