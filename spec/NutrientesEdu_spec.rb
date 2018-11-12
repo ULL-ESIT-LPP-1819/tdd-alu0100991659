@@ -33,6 +33,9 @@ RSpec.describe NutrientesEdu do
     it "Tiene cantidad de sal" do
       expect(@pistacho).to have_attributes(:sal => 1)
     end
+    it "Tiene metodo para obtener nombre" do
+      expect(@pistacho.nombre).to eq("pistacho")
+    end
   
 end
 end
