@@ -36,6 +36,9 @@ RSpec.describe NutrientesEdu do
     it "Tiene metodo para obtener nombre" do
       expect(@pistacho.nombre).to eq("pistacho")
     end
+    it "Tiene metodo para obtener cantidad de grasas" do
+      expect(@pistacho.grasas).to eq(20)
+    end
   
 end
 end
