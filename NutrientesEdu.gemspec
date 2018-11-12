@@ -7,17 +7,16 @@ Gem::Specification.new do |spec|
   spec.name          = "NutrientesEdu"
   spec.version       = NutrientesEdu::VERSION
   spec.authors       = ["Eduardo"]
-  spec.email         = ["dimion0096@gmail.com"]
+  spec.email         = ["alu0100991659@ull.edu.es"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Esta gema trabaja con los alimentos}
+  spec.homepage      = "https://github.com/ULL-ESIT-LPP-1819/tdd-alu0100991659"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata["allowed_push_host"] = "rubygems.org"
 
     spec.metadata["homepage_uri"] = spec.homepage
     spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
