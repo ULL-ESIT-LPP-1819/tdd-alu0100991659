@@ -14,4 +14,8 @@ require "NutrientesEdu/version"
       @sal = sal
       
     end
+    
+    def val_ener
+      (grasas*9+carbs*4+protein*4)
+    end
   end
