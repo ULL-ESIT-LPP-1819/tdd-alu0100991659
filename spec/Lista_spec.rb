@@ -7,7 +7,7 @@ RSpec.describe Lista do
   
   before :all do
     @nodo = Node.new(15, nil, nil)
-    #@lista1 = Lista.new()
+    @lista1 = Lista.new()
   end
   
   it "does something useful" do
@@ -18,9 +18,9 @@ RSpec.describe Lista do
     expect(@nodo).to have_attributes(:prev => nil, :next => nil)
   end
   
-  #context "Pruebas para las listas" do
-   # it "El objeto lista tiene cabeza y cola"
-    #  expect(@lista1).to have_attributes(:head => nil, :tail => nil)
-   #  end
-  #end
+  context "Pruebas para las listas" do
+    it "El objeto lista tiene cabeza y cola" do
+      expect(@lista1).to have_attributes(:head => nil, :tail => nil)
+    end
+  end
 end
