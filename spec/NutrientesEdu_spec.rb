@@ -54,5 +54,8 @@ RSpec.describe NutrientesEdu do
     it "Tiene metodo para obtener el valor energetico" do
       expect(@pistacho.val_ener).to eq(20*9+30*4+60*4)
     end
+    it "Tiene metodo para obtener la etiqueta" do
+      expect(@pistacho.to_s).to eq("Nombre: pistacho, Grasas: 20, Saturadas: 5, Carbohidratos: 30, Azucar: 3, Proteinas: 60, Sal: 1")
+    end
 end
 end
