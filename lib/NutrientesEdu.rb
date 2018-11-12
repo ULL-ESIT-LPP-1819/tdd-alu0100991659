@@ -2,9 +2,10 @@ require "NutrientesEdu/version"
 
   class Alimento
     
-    attr_reader :nombre
+    attr_reader :nombre, :grasas
     
-    def initialize(nombre)
+    def initialize(nombre, grasas)
       @nombre = nombre
+      @grasas = grasas
     end
   end
