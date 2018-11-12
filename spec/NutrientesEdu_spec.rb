@@ -48,5 +48,8 @@ RSpec.describe NutrientesEdu do
     it "Tiene metodo para obtener cantidad de azucares" do
       expect(@pistacho.azucar).to eq(3)
     end
+    it "Tiene metodo para obtener la cantidad de sal" do
+      expect(@pistacho.sal).to eq(1)
+    end
 end
 end
