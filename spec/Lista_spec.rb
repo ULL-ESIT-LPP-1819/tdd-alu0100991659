@@ -8,6 +8,7 @@ RSpec.describe Lista do
   before :all do
     @nodo = Node.new(15, nil, nil)
     @lista1 = Lista.new()
+    @lista2 = Lista.new()
   end
   
   it "does something useful" do
@@ -40,5 +41,11 @@ RSpec.describe Lista do
       @lista1.push_tail(7)
       expect(@lista1.pop_tail()).to eq(7)
     end
+    it "Se pueden meter aimentos" do
+      @node1 = Alimento.new("pistacho", 20, 5, 30, 3, 60, 1)
+      @lista2.push_head(@node1)
+      expect(@lista2.head.value.nombre).to eq("pistacho")
+    end
+      
   end
 end

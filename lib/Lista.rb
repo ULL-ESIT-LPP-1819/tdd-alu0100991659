@@ -57,7 +57,7 @@ require "NutrientesEdu/version"
       end
     end
         
-    
+  
     def each
       x = @head
       while(x != nil)
