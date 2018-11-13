@@ -21,6 +21,18 @@ require "NutrientesEdu/version"
       end
     end
     
+    def push_tail(value)
+      if(tail == nil)
+        node=Node.new(value,nil,nil)
+        @head = node
+        @tail = node
+      else
+        node=Node.new(value,nil,nil)
+        @tail.next = node
+        @tail = node
+      end
+    end
+    
     def each
       x = @head
       while(x != nil)
