@@ -24,7 +24,8 @@ RSpec.describe Lista do
     end
     it "Se puede hacer un  push por la cabeza" do
       @lista1.push_head(1)
-      expect(@lista1.head.value).to eq(1) 
+      @lista1.push_head(2)
+      expect(@lista1.head.value).to eq(2) 
     end
   end
 end
