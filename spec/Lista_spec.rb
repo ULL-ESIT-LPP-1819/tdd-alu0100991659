@@ -27,5 +27,10 @@ RSpec.describe Lista do
       @lista1.push_head(2)
       expect(@lista1.head.value).to eq(2) 
     end
+    it "Se puede hacer un push por la cola" do
+      @lista1.push_tail(1)
+      @lista1.push_tail(2)
+      expect(@lista1.tail.value).to eq(2)
+    end
   end
 end

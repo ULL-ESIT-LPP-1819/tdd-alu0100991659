@@ -15,7 +15,9 @@ require "NutrientesEdu/version"
         @tail = node
       else
         node=Node.new(value,nil,@head)
+        @head.prev = node
         @head = node
+        
       end
     end
     
