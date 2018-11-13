@@ -44,6 +44,18 @@ require "NutrientesEdu/version"
         return val
       end
     end
+    
+    def pop_tail()
+      if(@tail == nil)
+        return nil
+      else
+        val = @tail.value
+        node = @tail.prev
+        @tail = node
+        @tail.next = nil
+        return val
+      end
+    end
         
     
     def each
