@@ -41,7 +41,9 @@ require "NutrientesEdu/version"
         val= @head
         node = @head.next
         @head = node
-        @head.prev = nil
+        if @head != nil
+          @head.prev = nil
+        end
         return val
       end
     end
@@ -53,12 +55,38 @@ require "NutrientesEdu/version"
         val = @tail
         node = @tail.prev
         @tail = node
-        @tail.next = nil
+        if @tail != nil
+          @tail.next = nil
+        end
         return val
       end
     end
         
- 
+    def sort_salt
+      v = []
+      j = 0
+      each do
+        |i| v[j] = i
+        j += 1
+      end
+      terminado = false
+      while !terminado
+        terminado = true
+        for k in 0..(v.length)-2
+          if v[k].sal > v[k+1].sal
+            aux = v[k+1]
+            v[k+1] = v[k]
+            v[k] = aux
+            terminado = false
+          end
+        end
+      end
+      listadef = Lista.new()
+      for k in 0..(v.length)-1
+        listadef.push_tail(v[k])
+      end
+      return listadef
+    end
   
     def each
       x = @head

@@ -1,6 +1,8 @@
 require "NutrientesEdu/version"
 
   class Alimento
+
+    include Comparable
     
     attr_reader :nombre, :grasas, :grsat, :carbs, :azucar, :protein, :sal
     
@@ -22,4 +24,9 @@ require "NutrientesEdu/version"
     def to_s
       "Nombre: #{@nombre}, Grasas: #{@grasas}, Saturadas: #{@grsat}, Carbohidratos: #{@carbs}, Azucar: #{@azucar}, Proteinas: #{@protein}, Sal: #{@sal}"
     end
+    
+    #def <=> (other)
+    #  sal <=> other.sal
+    #end
+    
   end

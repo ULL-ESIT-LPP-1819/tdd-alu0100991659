@@ -8,6 +8,7 @@ RSpec.describe Lista do
   before :all do
     @nodo = Node.new(15, nil, nil)
     @lista1 = Lista.new()
+    @lista2 = Lista.new()
   end
   
   it "does something useful" do
@@ -46,19 +47,21 @@ RSpec.describe Lista do
       expect(@lista1.head.value.nombre).to eq("pistacho")
     end
     it "La lista se ordena" do
-     @node1 = Alimento.new("pistacho", 20, 5, 30, 3, 60, 1)
-     @node2 = Alimento.new("pistachito", 20, 5, 30, 3, 60, 3)
-     @node3 = Alimento.new("pistachete", 20, 5, 30, 3, 60, 4)
-     @node4 = Alimento.new("pistachuto", 20, 5, 30, 3, 60, 2)
-     @lista1.push_head(@node1)
-     @lista1.push_head(@node2)
-     @lista1.push_head(@node3)
-     @lista1.push_head(@node4)
-     @lista1 = @lista1.sort_salt()
-     expect(@lista1.pop_tail().value.sal).to eq(4)
-     expect(@lista1.pop_tail().value.sal).to eq(3)
-     expect(@lista1.pop_tail().value.sal).to eq(2)
-     expect(@lista1.pop_tail().value.sal).to eq(1)
+      @node1 = Alimento.new("pistacho", 20, 5, 30, 3, 60, 1)
+      @node2 = Alimento.new("pistachito", 20, 5, 30, 3, 60, 3)
+      @node3 = Alimento.new("pistachete", 20, 5, 30, 3, 60, 4)
+      @node4 = Alimento.new("pistachuto", 20, 5, 30, 3, 60, 2)
+      @lista2.push_head(@node1)
+      @lista2.push_head(@node2)
+      @lista2.push_head(@node3)
+      @lista2.push_head(@node4)
+      #expect(@lista2.sort).to eq([@node1, @node4, @node2, @node3])
+      @lista2 = @lista2.sort_salt()
+      expect(@lista2.pop_tail().value.sal).to eq(4)
+      expect(@lista2.pop_tail().value.sal).to eq(3)
+      expect(@lista2.pop_tail().value.sal).to eq(2)
+      expect(@lista2.pop_tail().value.sal).to eq(1)
+     
     end
   end
 end
