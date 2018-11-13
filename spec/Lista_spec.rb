@@ -33,8 +33,8 @@ RSpec.describe Lista do
       expect(@lista1.tail.value).to eq(2)
     end
     it "Se puede hace un pop por la cabeza" do
-      @lista1.push_head(1)
-      expect(@lista.pop_head()).to eq(1)
+      @lista1.push_head(5)
+      expect(@lista1.pop_head()).to eq(5)
     end
   end
 end
