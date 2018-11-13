@@ -22,5 +22,9 @@ RSpec.describe Lista do
     it "El objeto lista tiene cabeza y cola" do
       expect(@lista1).to have_attributes(:head => nil, :tail => nil)
     end
+    it "Se puede hacer un  push por la cabeza" do
+      @lista1.push_head(1)
+      expect(@lista1.head.value).to eq(1) 
+    end
   end
 end
