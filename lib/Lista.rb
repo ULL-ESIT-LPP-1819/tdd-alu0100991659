@@ -13,6 +13,7 @@ require "NutrientesEdu/version"
         node=Node.new(value,nil,nil)
         @head = node
         @tail = node
+        
       else
         node=Node.new(value,@head,nil)
         @head.prev = node
@@ -37,7 +38,7 @@ require "NutrientesEdu/version"
       if(@head == nil)
         return nil
       else
-        val= @head.value
+        val= @head
         node = @head.next
         @head = node
         @head.prev = nil
@@ -49,7 +50,7 @@ require "NutrientesEdu/version"
       if(@tail == nil)
         return nil
       else
-        val = @tail.value
+        val = @tail
         node = @tail.prev
         @tail = node
         @tail.next = nil
@@ -57,6 +58,7 @@ require "NutrientesEdu/version"
       end
     end
         
+ 
   
     def each
       x = @head
