@@ -88,6 +88,14 @@ require "NutrientesEdu/version"
       return listadef
     end
     
+    def to_s
+      string = "("
+      each do
+        |i| string += "#{i.nombre}, "
+      end
+      string += ")"
+      return string
+    end
   
     def each
       x = @head
