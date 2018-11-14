@@ -61,7 +61,9 @@ RSpec.describe Lista do
       expect(@lista2.pop_tail().value.sal).to eq(3)
       expect(@lista2.pop_tail().value.sal).to eq(2)
       expect(@lista2.pop_tail().value.sal).to eq(1)
-     
+    end
+    it "imprime bien el to_s" do
+      expect(@lista2.to_s).to eq("(pistachuto, pistachete, pistachito, pistacho, )")
     end
   end
 end

@@ -87,6 +87,7 @@ require "NutrientesEdu/version"
       end
       return listadef
     end
+    
   
     def each
       x = @head
