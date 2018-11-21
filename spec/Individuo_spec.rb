@@ -24,5 +24,10 @@ RSpec.describe Individuo do
         it "Prueba 2 del tipo " do
             expect(@individuo2.is_a?Object).to eq(true)
         end
+        
+        it "Prueba 3 del tipo " do
+            expect(@individuo2.is_a?IMC).to eq(true)
+        end
+        
     end
 end
