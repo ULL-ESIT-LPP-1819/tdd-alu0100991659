@@ -1,6 +1,7 @@
 require "bundler/setup"
-require "NutrientesEdu"
-require "Lista"
+require "NutrientesEdu/NutrientesEdu"
+require "NutrientesEdu/Lista"
+require "NutrientesEdu/Individuo"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

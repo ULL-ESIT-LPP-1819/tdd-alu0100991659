@@ -6,3 +6,10 @@ class Lista
   VERSION = "0.1.0"
 end
 
+class IMC
+  VERSION = "0.1.0"
+end
+
+class Individuo
+  VERSION = "0.1.0"
+end
