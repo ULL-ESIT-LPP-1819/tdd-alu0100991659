@@ -10,7 +10,11 @@ RSpec.describe Individuo do
       
     context "Pruebas para los individuos" do
         it "El individuo pertenece a la clase individuo" do
-            expect(@individuo.class).to eq(Individuo)
+            expect(@individuo1.class).to eq(Individuo)
+        end
+        
+        it "El individuo pertence a la jerarquia de IMC" do
+            expect(@individuo1.is_a?IMC).to eq(true)
         end
     end
 end

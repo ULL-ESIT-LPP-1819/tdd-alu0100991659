@@ -25,7 +25,5 @@ end
 
 
 
-
-
-        
-        
+class Individuo
+end
