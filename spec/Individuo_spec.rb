@@ -1,3 +1,5 @@
+require "NutrientesEdu/Lista"
+
 RSpec.describe Individuo do
   it "has a version number" do
     expect(IMC::VERSION).not_to be nil
@@ -5,7 +7,11 @@ RSpec.describe Individuo do
   end
   
     before :all do
-        @individuo2 = Individuos.new("Peter", 1, 1, 150, 160, 13, 1)
+        @individuo1 = Individuos.new("Peter", 1, 1, 150, 160, 13, 1)
+        @individuo2 = Individuos.new("Marta", 1, 1, 20, 160, 50, 0)
+        @individuo3 = Individuos.new("Ragnar", 1, 1, 80, 190, 39, 1)
+        @individuo4 = Individuos.new("Gonzalo", 1, 1, 200, 190, 89, 1)
+        @individuo5 = Individuos.new("Diana", 1, 1, 80, 150, 30, 0)
       end
       
     context "Pruebas para los individuos" do
@@ -33,5 +39,15 @@ RSpec.describe Individuo do
             expect(@individuo2.is_a?Individuos).to eq(true)
         end
         
+        it "Prueba para la lista" do
+          lista = Lista.new()
+          lista.push_head(@individuo1)
+          lista.push_head(@individuo2)
+          lista.push_head(@individuo3)
+          lista.push_head(@individuo4)
+          lista.push_head(@individuo5)
+          
+          expect(lista.head.value.nombre).to eq("Diana")
+        end
     end
 end
