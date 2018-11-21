@@ -40,14 +40,30 @@ RSpec.describe Individuo do
         end
         
         it "Prueba para la lista" do
-          lista = Lista.new()
-          lista.push_head(@individuo1)
-          lista.push_head(@individuo2)
-          lista.push_head(@individuo3)
-          lista.push_head(@individuo4)
-          lista.push_head(@individuo5)
+          @lista = Lista.new()
+          @lista.push_head(@individuo1)
+          @lista.push_head(@individuo2)
+          @lista.push_head(@individuo3)
+          @lista.push_head(@individuo4)
+          @lista.push_head(@individuo5)
           
-          expect(lista.head.value.nombre).to eq("Diana")
+          expect(@lista.head.value.nombre).to eq("Diana")
+        end
+        
+        it "Clasifica correctamente" do
+          @lista2 = Lista.new()
+          @lista2.push_head(@individuo1)
+          @lista2.push_head(@individuo2)
+          @lista2.push_head(@individuo3)
+          @lista2.push_head(@individuo4)
+          @lista2.push_head(@individuo5)
+          
+          @lista2.each do
+            |i|
+            if i.nombre == "Gonzalo"
+              expect(i.clas_imc).to eq("Obeso")
+            end
+          end
         end
     end
 end

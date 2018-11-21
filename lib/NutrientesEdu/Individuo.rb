@@ -13,6 +13,7 @@ class Individuos < IMC
         if @paciente==1
             super(peso,talla,edad,sexo)
         end
-       
     end
+    
+    
 end
