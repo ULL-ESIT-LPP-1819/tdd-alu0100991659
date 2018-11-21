@@ -1,29 +1,18 @@
 require "NutrientesEdu/version"
+require "NutrientesEdu/IMC"
 
-class IMC
-	attr_reader :peso, :altura, :edad, :sexo
-
-	def initialize(a,b,c,d)
-		@peso=a
-		@altura=b
-		@edad=c
-		@sexo=d
-	end
-
-	def calcular_imc
-		(@peso)/(@altura*@altura)
-	end
-	def porcentaje_grasa
-		((1.2*calcular_imc)+(0.23*edad)-(10.8*sexo)-5.4)
-	end
-	
-	def to_s
-        "Altura: #{@altura}, Peso: #{@peso}, Edad: #{@sexo}, Sexo: #{@sexo}"
+class Individuos < IMC
+    
+    include Comparable
+    attr_reader :nombre, :paciente, :tratamiento
+    
+    def initialize(nombre, paciente, tratamiento, peso, talla, edad, sexo)
+        @nombre=nombre
+        @paciente=paciente
+        @tratamiento=tratamiento
+        if @paciente==1
+            super(peso,talla,edad,sexo)
+        end
+       
     end
-	
-end
-
-
-
-class Individuo
 end

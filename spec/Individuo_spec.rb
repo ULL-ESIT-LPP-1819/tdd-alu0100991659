@@ -5,16 +5,16 @@ RSpec.describe Individuo do
   end
   
     before :all do
-        @individuo1 = Individuo.new()
+        @individuo2 = Individuos.new("Peter", 1, 1, 150, 160, 13, 1)
       end
       
     context "Pruebas para los individuos" do
         it "El individuo pertenece a la clase individuo" do
-            expect(@individuo1.class).to eq(Individuo)
+            expect(@individuo2.class).to eq(Individuos)
         end
         
-        it "El individuo pertence a la jerarquia de IMC" do
-            expect(@individuo1.is_a?IMC).to eq(true)
+        it "El individuo pertenece a la jerarquia de clases" do
+            expect(@individuo2.is_a?IMC).to eq(true)
         end
     end
 end
