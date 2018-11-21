@@ -20,5 +20,9 @@ RSpec.describe Individuo do
         it "Prueba 1 del tipo " do
             expect(@individuo2.is_a?BasicObject).to eq(true)
         end
+        
+        it "Prueba 2 del tipo " do
+            expect(@individuo2.is_a?Object).to eq(true)
+        end
     end
 end
