@@ -17,5 +17,8 @@ RSpec.describe Individuo do
             expect(@individuo2.class.superclass).to eq(IMC)
         end
         
+        it "Prueba 1 del tipo " do
+            expect(@individuo2.is_a?BasicObject).to eq(true)
+        end
     end
 end
