@@ -15,5 +15,11 @@ class Individuos < IMC
         end
     end
     
-    
+    def clas_imc
+        if calcular_imc < 30
+            return "Normal"
+        else
+            return "Obeso"
+        end
+    end
 end
