@@ -14,7 +14,8 @@ RSpec.describe Individuo do
         end
         
         it "El individuo pertenece a la jerarquia de clases" do
-            expect(@individuo2.is_a?IMC).to eq(true)
+            expect(@individuo2.class.superclass).to eq(IMC)
         end
+        
     end
 end
