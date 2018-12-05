@@ -105,6 +105,7 @@ RSpec.describe Lista do
       expect(@lista1.sort).to eq([@alimento1, @alimento2, @alimento3])
     end
     
+    
     it "Pruebas para enumerable individuos, collect" do
       expect(@lista2.collect { |i| i.to_s}).to eq(["#{@individuo3}", "#{@individuo2}", "#{@individuo1}"])
     end
