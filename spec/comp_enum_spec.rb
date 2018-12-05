@@ -90,5 +90,8 @@ RSpec.describe Lista do
     it "Pruebas para enumerable etiquetas, max" do
       expect(@lista1.max).to eq(@alimento3)
     end
+    it "Pruebas para enumerable etiquetas, min" do
+      expect(@lista1.min).to eq(@alimento1)
+    end
   end
 end
