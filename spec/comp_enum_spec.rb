@@ -84,5 +84,8 @@ RSpec.describe Lista do
     it "Pruebas para enumerable etiquetas, collect" do
       expect(@lista1.collect { |i| i.to_s}).to eq(["Nombre: manzana, Grasas: 6, Saturadas: 1, Carbohidratos: 15, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: pera, Grasas: 6, Saturadas: 1, Carbohidratos: 20, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: mango, Grasas: 4, Saturadas: 2, Carbohidratos: 5, Azucar: 2, Proteinas: 6, Sal: 0"])
     end
+    it "Pruebas para enumerable etiquetas, select" do
+      expect(@lista1.select { |i| i.between?(@alimento1,@alimento2)}).to eq(["Nombre: manzana, Grasas: 6, Saturadas: 1, Carbohidratos: 15, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: pera, Grasas: 6, Saturadas: 1, Carbohidratos: 20, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: mango, Grasas: 4, Saturadas: 2, Carbohidratos: 5, Azucar: 2, Proteinas: 6, Sal: 0"])
+    end
   end
 end
