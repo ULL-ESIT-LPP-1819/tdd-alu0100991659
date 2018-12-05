@@ -65,3 +65,24 @@ RSpec.describe Individuos do
   end
 end
       
+RSpec.describe Lista do
+  it "has a version number" do
+    expect(Lista::VERSION).not_to be nil
+  end
+  
+  before :all do
+    @alimento1=Alimento.new("mango", 4, 2, 5, 2, 6, 0)
+    @alimento2=Alimento.new("pera", 6, 1, 20, 6, 2, 1)
+    @alimento3=Alimento.new("manzana", 6, 1, 15, 6, 2, 1)
+    @lista1=Lista.new()
+    @lista1.push_head(@alimento1)
+    @lista1.push_head(@alimento2)
+    @lista1.push_head(@alimento3)
+  end
+
+  context "Pruebas para las listas diblemente enlazadas" do
+    it "Pruebas para enumerable" do
+      puts @lista1.collect { |i| i.to_s}
+    end
+  end
+end
