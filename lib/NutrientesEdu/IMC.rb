@@ -1,5 +1,3 @@
-require "NutrientesEdu/version"
-
 class IMC
     include Comparable
     
@@ -18,5 +16,9 @@ class IMC
 
 	def porcentaje_grasa
 		((1.2*calcular_imc)+(0.23*edad)-(10.8*sexo)-5.4)
+	end
+	
+	def to_s
+		"#{@peso} #{@altura} #{@edad} #{@sexo}"
 	end
 end

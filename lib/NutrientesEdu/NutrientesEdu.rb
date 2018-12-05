@@ -25,8 +25,5 @@ require "NutrientesEdu/version"
       "Nombre: #{@nombre}, Grasas: #{@grasas}, Saturadas: #{@grsat}, Carbohidratos: #{@carbs}, Azucar: #{@azucar}, Proteinas: #{@protein}, Sal: #{@sal}"
     end
     
-    #def <=> (other)
-    #  sal <=> other.sal
-    #end
-    
+   
   end

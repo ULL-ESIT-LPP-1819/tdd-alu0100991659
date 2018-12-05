@@ -22,4 +22,12 @@ class Individuos < IMC
             return "Obeso"
         end
     end
+    
+    def to_s
+        rval = "#{@nombre}"
+        if(@tratamiento == 1)
+            rval += super
+        end
+        return rval
+    end
 end
