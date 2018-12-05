@@ -21,4 +21,8 @@ class IMC
 	def to_s
 		"#{@peso} #{@altura} #{@edad} #{@sexo}"
 	end
+	
+	def <=> (other)
+       calcular_imc <=> other.calcular_imc
+    end
 end
