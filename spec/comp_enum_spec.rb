@@ -78,11 +78,19 @@ RSpec.describe Lista do
     @lista1.push_head(@alimento1)
     @lista1.push_head(@alimento2)
     @lista1.push_head(@alimento3)
+    @individuo1 = Individuos.new("Marta", 1, 1, 20, 1.60, 50, 0)
+    @individuo2 = Individuos.new("John", 1, 1, 50, 1.65, 25, 0)
+    @individuo3 = Individuos.new("Peter", 1, 1, 150, 1.60, 13, 1)
+    @lista2=Lista.new()
+    @lista2.push_head(@individuo1)
+    @lista2.push_head(@individuo2)
+    @lista2.push_head(@individuo3)
+    
   end
 
-  context "Pruebas para las listas diblemente enlazadas" do
+  context "Pruebas para las listas doblemente enlazadas" do
     it "Pruebas para enumerable etiquetas, collect" do
-      expect(@lista1.collect { |i| i.to_s}).to eq(["Nombre: pera, Grasas: 6, Saturadas: 1, Carbohidratos: 20, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: manzana, Grasas: 6, Saturadas: 1, Carbohidratos: 15, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: mango, Grasas: 4, Saturadas: 2, Carbohidratos: 5, Azucar: 2, Proteinas: 6, Sal: 0"])
+      expect(@lista1.collect { |i| i.to_s}).to eq(["#{@alimento3}", "#{@alimento2}", "#{@alimento1}"])
     end
     it "Pruebas para enumerable etiquetas, select" do
       expect(@lista1.select { |i| i.between?(@alimento1,@alimento3)}).to eq([@alimento3, @alimento2, @alimento1])
@@ -95,6 +103,10 @@ RSpec.describe Lista do
     end
     it "Pruebas para enumerable etiquetas, sort" do
       expect(@lista1.sort).to eq([@alimento1, @alimento2, @alimento3])
+    end
+    
+    it "Pruebas para enumerable individuos, collect" do
+      expect(@lista2.collect { |i| i.to_s}).to eq(["#{@individuo3}", "#{@individuo2}", "#{@individuo1}"])
     end
   end
 end
