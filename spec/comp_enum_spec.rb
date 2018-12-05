@@ -57,6 +57,11 @@ RSpec.describe Individuos do
     it "Prueba para comparable igual" do
       expect(@individuo1 == @individuo2).to eq(false)
     end
+    it "Prueba para comparable between" do
+      individuoaux = Individuos.new("John", 1, 1, 50, 1.60, 25, 0)
+      expect(individuoaux.between?(@individuo1,@individuo2)).to eq(true)
+    end
+    
   end
 end
       
