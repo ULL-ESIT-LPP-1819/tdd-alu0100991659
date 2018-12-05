@@ -45,6 +45,9 @@ RSpec.describe Individuos do
     it "Prueba para comparable menor" do
       expect(@individuo1 < @individuo2).to eq(true)
     end
+    it "Prueba para comparable mayor" do
+      expect(@individuo1 > @individuo2).to eq(false)
+    end
   end
 end
       
