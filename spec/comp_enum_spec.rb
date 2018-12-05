@@ -108,9 +108,11 @@ RSpec.describe Lista do
     it "Pruebas para enumerable individuos, collect" do
       expect(@lista2.collect { |i| i.to_s}).to eq(["#{@individuo3}", "#{@individuo2}", "#{@individuo1}"])
     end
-    
     it "Pruebas para enumerable etiquetas, select" do
       expect(@lista2.select { |i| i.between?(@individuo1,@individuo3)}).to eq([@individuo3, @individuo2, @individuo1])
+    end
+    it "Pruebas para enumerable etiquetas, max" do
+      expect(@lista2.max).to eq(@individuo3)
     end
   end
 end
