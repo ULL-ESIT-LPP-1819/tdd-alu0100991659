@@ -15,6 +15,12 @@ RSpec.describe NutrientesEdu do
     it "Prueba para comparable mayor" do
       expect(@alimento1 > @alimento2).to eq(false)
     end
+    it "Prueba para comparable mayor o igual" do
+      expect(@alimento1 >= @alimento2).to eq(false)
+    end
+    it "Prueba para comparable menor o igual" do
+      expect(@alimento1 <= @alimento2).to eq(true)
+    end
   end
 end
       
