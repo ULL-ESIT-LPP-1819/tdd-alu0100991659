@@ -81,8 +81,8 @@ RSpec.describe Lista do
   end
 
   context "Pruebas para las listas diblemente enlazadas" do
-    it "Pruebas para enumerable" do
-      puts @lista1.collect { |i| i.to_s}
+    it "Pruebas para enumerable etiquetas, collect" do
+      expect(@lista1.collect { |i| i.to_s}).to eq(["Nombre: manzana, Grasas: 6, Saturadas: 1, Carbohidratos: 15, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: pera, Grasas: 6, Saturadas: 1, Carbohidratos: 20, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: mango, Grasas: 4, Saturadas: 2, Carbohidratos: 5, Azucar: 2, Proteinas: 6, Sal: 0"])
     end
   end
 end

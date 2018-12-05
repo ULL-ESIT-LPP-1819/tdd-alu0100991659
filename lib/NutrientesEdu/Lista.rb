@@ -4,6 +4,7 @@ require "NutrientesEdu/version"
 
   class Lista
     
+    include Enumerable
     
     attr_reader :head, :tail
     
