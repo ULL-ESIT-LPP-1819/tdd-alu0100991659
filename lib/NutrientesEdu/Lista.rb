@@ -5,7 +5,7 @@ require "NutrientesEdu/version"
   class Lista
     
     include Enumerable
-    
+    include Comparable
     attr_reader :head, :tail
     
     def push_head(value)

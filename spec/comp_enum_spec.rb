@@ -72,8 +72,8 @@ RSpec.describe Lista do
   
   before :all do
     @alimento1=Alimento.new("mango", 4, 2, 5, 2, 6, 0)
-    @alimento2=Alimento.new("pera", 6, 1, 20, 6, 2, 1)
-    @alimento3=Alimento.new("manzana", 6, 1, 15, 6, 2, 1)
+    @alimento2=Alimento.new("manzana", 6, 1, 15, 6, 2, 1)
+    @alimento3=Alimento.new("pera", 6, 1, 20, 6, 2, 1)
     @lista1=Lista.new()
     @lista1.push_head(@alimento1)
     @lista1.push_head(@alimento2)
@@ -82,10 +82,10 @@ RSpec.describe Lista do
 
   context "Pruebas para las listas diblemente enlazadas" do
     it "Pruebas para enumerable etiquetas, collect" do
-      expect(@lista1.collect { |i| i.to_s}).to eq(["Nombre: manzana, Grasas: 6, Saturadas: 1, Carbohidratos: 15, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: pera, Grasas: 6, Saturadas: 1, Carbohidratos: 20, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: mango, Grasas: 4, Saturadas: 2, Carbohidratos: 5, Azucar: 2, Proteinas: 6, Sal: 0"])
+      expect(@lista1.collect { |i| i.to_s}).to eq(["Nombre: pera, Grasas: 6, Saturadas: 1, Carbohidratos: 20, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: manzana, Grasas: 6, Saturadas: 1, Carbohidratos: 15, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: mango, Grasas: 4, Saturadas: 2, Carbohidratos: 5, Azucar: 2, Proteinas: 6, Sal: 0"])
     end
     it "Pruebas para enumerable etiquetas, select" do
-      expect(@lista1.select { |i| i.between?(@alimento1,@alimento2)}).to eq(["Nombre: manzana, Grasas: 6, Saturadas: 1, Carbohidratos: 15, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: pera, Grasas: 6, Saturadas: 1, Carbohidratos: 20, Azucar: 6, Proteinas: 2, Sal: 1", "Nombre: mango, Grasas: 4, Saturadas: 2, Carbohidratos: 5, Azucar: 2, Proteinas: 6, Sal: 0"])
+      expect(@lista1.select { |i| i.between?(@alimento1,@alimento3)}).to eq([@alimento3, @alimento2, @alimento1])
     end
   end
 end
