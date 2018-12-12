@@ -21,6 +21,7 @@ require "NutrientesEdu/version"
       (grasas*9+carbs*4+protein*4)
     end
     
+    
     def to_s
       "Nombre: #{@nombre}, Grasas: #{@grasas}, Saturadas: #{@grsat}, Carbohidratos: #{@carbs}, Azucar: #{@azucar}, Proteinas: #{@protein}, Sal: #{@sal}"
     end

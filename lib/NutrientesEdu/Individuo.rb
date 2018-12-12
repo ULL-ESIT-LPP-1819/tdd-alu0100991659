@@ -6,10 +6,15 @@ class Individuos < IMC
     include Comparable
     attr_reader :nombre, :paciente, :tratamiento
     
-    def initialize(nombre, paciente, tratamiento, peso, talla, edad, sexo)
+    def initialize(nombre, paciente, tratamiento, peso, talla, edad, sexo, f_af)
         @nombre=nombre
         @paciente=paciente
         @tratamiento=tratamiento
+        @f_af=f_af
+        @peso=peso
+        @talla=talla
+        @edad=edad
+        @sexo=sexo
         if @paciente==1
             super(peso,talla,edad,sexo)
         end
@@ -22,6 +27,17 @@ class Individuos < IMC
             return "Obeso"
         end
     end
+    
+    def g_e_basal
+        if(@sexo == 0)
+            return 10*@peso+6.25*@talla-5*@edad-161
+        else
+            return 10*@peso+6.25*@talla-5*@edad+5
+        end
+    end
+    
+    
+            
     
     def to_s
         rval = "#{@nombre}"
