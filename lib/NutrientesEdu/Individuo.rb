@@ -1,5 +1,4 @@
 require "NutrientesEdu/version"
-require "NutrientesEdu/IMC"
 
 class Individuos < IMC
     
