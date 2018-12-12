@@ -1,6 +1,6 @@
-RSpec.describe Individuo do
+RSpec.describe Individuos do
   it "has a version number" do
-    expect(Individuo::VERSION).not_to be nil
+    expect(Individuos::VERSION).not_to be nil
   end
   
     before :all do
