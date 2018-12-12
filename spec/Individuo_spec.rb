@@ -8,11 +8,11 @@ RSpec.describe Individuos do
   end
   
     before :all do
-        @individuo1 = Individuos.new("Peter", 1, 1, 150, 1.60, 13, 1)
-        @individuo2 = Individuos.new("Marta", 1, 1, 20, 1.60, 50, 0)
-        @individuo3 = Individuos.new("Ragnar", 1, 1, 80, 1.90, 39, 1)
-        @individuo4 = Individuos.new("Gonzalo", 1, 1, 200, 1.90, 89, 1)
-        @individuo5 = Individuos.new("Diana", 1, 1, 500, 1.50, 30, 0)
+        @individuo1 = Individuos.new("Peter", 1, 1, 150, 1.60, 13, 1, 0)
+        @individuo2 = Individuos.new("Marta", 1, 1, 20, 1.60, 50, 0, 0)
+        @individuo3 = Individuos.new("Ragnar", 1, 1, 80, 1.90, 39, 1, 0)
+        @individuo4 = Individuos.new("Gonzalo", 1, 1, 200, 1.90, 89, 1, 0)
+        @individuo5 = Individuos.new("Diana", 1, 1, 500, 1.50, 30, 0, 0)
       end
       
     context "Pruebas para los individuos" do

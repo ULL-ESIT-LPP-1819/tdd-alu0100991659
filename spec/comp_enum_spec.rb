@@ -37,8 +37,8 @@ RSpec.describe Individuos do
   end
   
   before :all do
-    @individuo1 = Individuos.new("Marta", 1, 1, 20, 1.60, 50, 0)
-    @individuo2 = Individuos.new("Peter", 1, 1, 150, 1.60, 13, 1)
+    @individuo1 = Individuos.new("Marta", 1, 1, 20, 1.60, 50, 0, 0)
+    @individuo2 = Individuos.new("Peter", 1, 1, 150, 1.60, 13, 1, 0)
   end
   
   context "Pruebas de comparación para los Individuos (Por IMC)" do
@@ -58,7 +58,7 @@ RSpec.describe Individuos do
       expect(@individuo1 == @individuo2).to eq(false)
     end
     it "Prueba para comparable between" do
-      individuoaux = Individuos.new("John", 1, 1, 50, 1.60, 25, 0)
+      individuoaux = Individuos.new("John", 1, 1, 50, 1.60, 25, 0, 0)
       expect(individuoaux.between?(@individuo1,@individuo2)).to eq(true)
     end
     
@@ -78,9 +78,9 @@ RSpec.describe Lista do
     @lista1.push_head(@alimento1)
     @lista1.push_head(@alimento2)
     @lista1.push_head(@alimento3)
-    @individuo1 = Individuos.new("Marta", 1, 1, 20, 1.60, 50, 0)
-    @individuo2 = Individuos.new("John", 1, 1, 50, 1.65, 25, 0)
-    @individuo3 = Individuos.new("Peter", 1, 1, 150, 1.60, 13, 1)
+    @individuo1 = Individuos.new("Marta", 1, 1, 20, 1.60, 50, 0, 0)
+    @individuo2 = Individuos.new("John", 1, 1, 50, 1.65, 25, 0, 0)
+    @individuo3 = Individuos.new("Peter", 1, 1, 150, 1.60, 13, 1, 0)
     @lista2=Lista.new()
     @lista2.push_head(@individuo1)
     @lista2.push_head(@individuo2)
