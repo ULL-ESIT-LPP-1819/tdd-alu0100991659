@@ -1,3 +1,4 @@
+require "spec_helper"
 RSpec.describe NutrientesEdu do
   it "has a version number" do
     expect(NutrientesEdu::VERSION).not_to be nil

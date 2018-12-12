@@ -1,4 +1,4 @@
-require "NutrientesEdu/Lista"
+require "spec_helper"
 
 RSpec.describe Individuos do
   it "has a version number" do
