@@ -10,6 +10,6 @@ class IMC
   VERSION = "0.1.0"
 end
 
-class Individuo
+class Individuos
   VERSION = "0.1.0"
 end
