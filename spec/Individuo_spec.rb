@@ -3,6 +3,7 @@ require "NutrientesEdu/Lista"
 RSpec.describe Individuos do
   it "has a version number" do
     expect(IMC::VERSION).not_to be nil
+    
     expect(Individuos::VERSION).not_to be nil
   end
   
