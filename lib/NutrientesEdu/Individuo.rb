@@ -36,7 +36,17 @@ class Individuos < IMC
         end
     end
     
+    def e_term
+        return g_e_basal*0.10
+    end
     
+    def g_act_fis
+        return g_e_basal*@f_af
+    end
+    
+    def g_en_total
+        return g_e_basal+e_term+g_act_fis
+    end
             
     
     def to_s
