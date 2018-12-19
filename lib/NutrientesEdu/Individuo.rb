@@ -1,4 +1,5 @@
 require "NutrientesEdu/version"
+require "NutrientesEdu/IMC"
 
 class Individuos < IMC
     
@@ -49,7 +50,7 @@ class Individuos < IMC
             
     
     def to_s
-        rval = "#{@nombre}"
+        rval = "#{@nombre} #{g_en_total}"
         if(@tratamiento == 1)
             rval += super
         end
