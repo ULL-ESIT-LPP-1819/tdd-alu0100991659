@@ -66,8 +66,8 @@ RSpec.describe Individuos do
             |i|
             if i.nombre == "Diana"
               expect(i.clas_imc).to eq("Obeso")
-            elsif i.nombre == "Ana"
-              expect(i.class_imc).to eq("Normal")
+            elsif i.nombre == "Marta"
+              expect(i.clas_imc).to eq("Normal")
             end
           end
         end
