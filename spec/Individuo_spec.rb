@@ -20,6 +20,9 @@ RSpec.describe Individuos do
             expect(@individuo2.class).to eq(Individuos)
         end
         
+        it "Se puede calcular el porcentaje de grasa" do
+            expect(@individuo1.porcentaje_grasa).to be >(0)
+        end
         it "El individuo pertenece a la jerarquia de clases" do
             expect(@individuo2.class.superclass).to eq(IMC)
         end
@@ -63,6 +66,8 @@ RSpec.describe Individuos do
             |i|
             if i.nombre == "Diana"
               expect(i.clas_imc).to eq("Obeso")
+            elsif i.nombre == "Ana"
+              expect(i.class_imc).to eq("Normal")
             end
           end
         end
