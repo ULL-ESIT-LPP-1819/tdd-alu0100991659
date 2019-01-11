@@ -5,6 +5,7 @@ require "NutrientesEdu/NutrientesEdu"
 require "NutrientesEdu/Lista"
 require "NutrientesEdu/Individuo"
 require "NutrientesEdu/IMC"
+require "NutrientesEdu/DietaDiaria"
 require "NutrientesEdu/Menu"
 
 RSpec.configure do |config|
