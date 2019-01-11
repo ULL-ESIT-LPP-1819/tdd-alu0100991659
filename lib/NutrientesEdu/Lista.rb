@@ -89,12 +89,9 @@ require "NutrientesEdu/version"
     end
     
     def to_s
-      string = "("
-      each do
-        |i| string += "#{i.nombre}, "
-      end
-      string += ")"
-      return string
+        s = ""
+        each {|i| s += "#{i.to_s}\n"}
+        s
     end
   
     def each

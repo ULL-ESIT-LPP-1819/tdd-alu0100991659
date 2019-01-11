@@ -14,3 +14,8 @@ end
 class Individuos < IMC
   VERSION = "0.1.0"
 end
+
+class Manu
+  VERSION = "0.1.0"
+end
+

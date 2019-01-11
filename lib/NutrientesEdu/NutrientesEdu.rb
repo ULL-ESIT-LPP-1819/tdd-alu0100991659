@@ -23,7 +23,8 @@ require "NutrientesEdu/version"
     
     
     def to_s
-      "Nombre: #{@nombre}, Grasas: #{@grasas}, Saturadas: #{@grsat}, Carbohidratos: #{@carbs}, Azucar: #{@azucar}, Proteinas: #{@protein}, Sal: #{@sal}"
+      "Nombre: #{@nombre}, Grasas: #{@grasas}, Saturadas: #{@grsat}, Carbohidratos: #{@carbs}, Azucar: #{@azucar}, Proteinas: #{@protein}, Sal: #{@sal} Kcal: #{val_ener}
+      "
     end
     
     def <=> (other)
